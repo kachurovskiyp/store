@@ -9,7 +9,7 @@ import {
 	NotFoundException
 } from '@nestjs/common';
 import { OrdersService } from './orders.service';
-import { Order } from 'src/db';
+import { Order } from '@prisma/client';
 import { ParseUUIDPipe } from '@nestjs/common';
 import { CreateOrderDTO } from './dtos/create-order.dto';
 import { UpdateOrderDTO } from './dtos/update-order.dto';

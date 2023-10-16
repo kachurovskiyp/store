@@ -2,22 +2,14 @@ import { Transform } from 'class-transformer';
 import {
   IsNotEmpty,
   IsString,
-	IsUUID,
-  Min,
+  Length,
 } from 'class-validator';
 
-export class UpdateOrderDTO {
-	@IsNotEmpty()
+export class CreateClientDTO {
+  @IsNotEmpty()
   @IsString()
-	@IsUUID()
-  @Min(0)
-  clientId: string;
-
-	@IsNotEmpty()
-  @IsString()
-	@IsUUID()
-  @Min(0)
-  productId: string;
+  @Length(2, 30)
+  name: string;
 
 	@IsNotEmpty()
 	@IsString()
